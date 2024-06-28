@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>weather⛅️Buddy</title>
+    <link rel="icon" type="image/x-icon" href="images/icon1.png">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location" id="id_of_textbox">
+            <button class="fa-solid fa-magnifying-glass" id="id_of_button"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="images/404.png">
+            <p>Oops! Invalid location :/</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+
+            <div class="pressure-details">
+                <i class="fa-solid 
+            fa-arrow-down-up-across-line"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Pressure</p>
+                </div>
+            </div>
+
+            <div class="visiblity-details">
+                <i class="fa-regular fa-eye"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Visiblity</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+        document.getElementById("id_of_textbox")
+            .addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("id_of_button").click();
+                }
+            });
+    </script>
+</body>
+
+</html>
